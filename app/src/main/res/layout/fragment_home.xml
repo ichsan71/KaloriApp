@@ -1,0 +1,605 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/fragment_home"
+    tools:context=".ui.home.HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:background="@drawable/eclipse_home_page"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvTgl"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:fontFamily="@font/judul_font"
+            android:text="@string/tanggal"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="145dp"
+            android:layout_height="143dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/rounded_button_white"
+            app:cardCornerRadius="21dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTgl">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/rounded_button_white">
+
+                <TextView
+                    android:id="@+id/tvKal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="64dp"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/judul_font"
+                    android:text="@string/kal"
+                    android:textAlignment="center"
+                    android:textColor="@color/txt_color_grey"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_kal_in_day"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/judul_font"
+                    android:text="@string/kalori_harian"
+                    android:textAlignment="center"
+                    android:textColor="@color/txt_color_grey"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="145dp"
+            android:layout_height="143dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="21dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTgl">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/rounded_button_white">
+
+                <TextView
+                    android:id="@+id/tv_sum_kal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="64dp"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/judul_font"
+                    android:text="@string/_180"
+                    android:textAlignment="center"
+                    android:textColor="@color/txt_color_grey"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_kal_sum"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/judul_font"
+                    android:text="@string/jumlah_kalori"
+                    android:textAlignment="center"
+                    android:textColor="@color/txt_color_grey"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/rounded_button_white"
+        app:cardCornerRadius="21dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/rounded_button_white">
+
+            <TextView
+                android:id="@+id/tv_sarapan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/sub_judul_font"
+                android:text="@string/sarapan"
+                android:textAlignment="center"
+                android:textColor="@color/txt_color_grey"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/add_sarapan_logo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_sarapan" />
+
+            <TextView
+                android:id="@+id/tv_list_sarapan1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/judul_font"
+                android:text="@string/cheese_burger"
+                android:textAlignment="center"
+                android:textColor="@color/txt_color_grey"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                app:layout_constraintStart_toEndOf="@+id/imageView"
+                app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+            <TextView
+                android:id="@+id/tv_list_sarapan2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/judul_font"
+                android:text="@string/cheese_burger"
+                android:textAlignment="center"
+                android:textColor="@color/txt_color_grey"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@+id/tv_list_sarapan1"
+                app:layout_constraintTop_toBottomOf="@+id/tv_list_sarapan1" />
+
+            <TextView
+                android:id="@+id/tv_jumlah_kalori_sarapan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/sub_judul_font"
+                android:text="@string/_180"
+                android:textAlignment="center"
+                android:textColor="@color/txt_color_grey"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/tv_kalori_sarapan"
+                app:layout_constraintTop_toBottomOf="@+id/tv_sarapan" />
+
+            <TextView
+                android:id="@+id/tv_kalori_sarapan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:fontFamily="@font/sub_judul_font"
+                android:text="@string/kalori"
+                android:textAlignment="center"
+                android:textColor="@color/txt_color_grey"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_jumlah_kalori_sarapan"
+                app:layout_constraintEnd_toStartOf="@+id/btn_add_sarapan"
+                app:layout_constraintTop_toTopOf="@+id/tv_jumlah_kalori_sarapan"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <androidx.constraintlayout.utils.widget.ImageFilterButton
+                android:id="@+id/btn_add_sarapan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:background="@color/base_color"
+                android:src="@drawable/baseline_add_24"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_jumlah_kalori_sarapan"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_jumlah_kalori_sarapan" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView3"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/rounded_button_white"
+        app:cardCornerRadius="21dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView2">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/rounded_button_white">
+
+            <TextView
+                android:id="@+id/tv_makan_siang"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/sub_judul_font"
+                android:text="Makan Siang"
+                android:textAlignment="center"
+                android:textColor="@color/txt_color_grey"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/add_makan_siang_logo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_makan_siang" />
+
+            <TextView
+                android:id="@+id/tv_list_makan_siang1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/judul_font"
+                android:text="@string/cheese_burger"
+                android:textAlignment="center"
+                android:textColor="@color/txt_color_grey"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+                app:layout_constraintStart_toEndOf="@+id/imageView2"
+                app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+            <TextView
+                android:id="@+id/tv_list_makan_siang2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/judul_font"
+                android:text="@string/cheese_burger"
+                android:textAlignment="center"
+                android:textColor="@color/txt_color_grey"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@+id/tv_list_makan_siang1"
+                app:layout_constraintTop_toBottomOf="@+id/tv_list_makan_siang1" />
+
+            <TextView
+                android:id="@+id/tv_jumlah_kalori_makan_siang"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/sub_judul_font"
+                android:text="@string/_180"
+                android:textAlignment="center"
+                android:textColor="@color/txt_color_grey"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/tv_kalori_makan_siang"
+                app:layout_constraintTop_toBottomOf="@+id/tv_makan_siang" />
+
+            <TextView
+                android:id="@+id/tv_kalori_makan_siang"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:fontFamily="@font/sub_judul_font"
+                android:text="@string/kalori"
+                android:textAlignment="center"
+                android:textColor="@color/txt_color_grey"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_jumlah_kalori_makan_siang"
+                app:layout_constraintEnd_toStartOf="@+id/btn_add_makan_siang"
+                app:layout_constraintTop_toTopOf="@+id/tv_jumlah_kalori_makan_siang"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <androidx.constraintlayout.utils.widget.ImageFilterButton
+                android:id="@+id/btn_add_makan_siang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:background="@color/base_color"
+                android:src="@drawable/baseline_add_24"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_jumlah_kalori_makan_siang"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_jumlah_kalori_makan_siang" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView4"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/rounded_button_white"
+        app:cardCornerRadius="21dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView3">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/rounded_button_white">
+
+            <TextView
+                android:id="@+id/tv_makan_malam"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/sub_judul_font"
+                android:text="@string/makan_malam"
+                android:textAlignment="center"
+                android:textColor="@color/txt_color_grey"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/add_makan_malam_logo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_makan_malam" />
+
+            <TextView
+                android:id="@+id/tv_list_makan_malam1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/judul_font"
+                android:text="@string/cheese_burger"
+                android:textAlignment="center"
+                android:textColor="@color/txt_color_grey"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+                app:layout_constraintStart_toEndOf="@+id/imageView3"
+                app:layout_constraintTop_toTopOf="@+id/imageView3"/>
+
+            <TextView
+                android:id="@+id/tv_list_makan_malam2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/judul_font"
+                android:text="@string/cheese_burger"
+                android:textAlignment="center"
+                android:textColor="@color/txt_color_grey"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@+id/tv_list_makan_malam1"
+                app:layout_constraintTop_toBottomOf="@+id/tv_list_makan_malam1" />
+
+            <TextView
+                android:id="@+id/tv_jumlah_kalori_makan_malam"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/sub_judul_font"
+                android:text="@string/_180"
+                android:textAlignment="center"
+                android:textColor="@color/txt_color_grey"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/tv_kalori_makan_malam"
+                app:layout_constraintTop_toBottomOf="@+id/tv_makan_malam" />
+
+            <TextView
+                android:id="@+id/tv_kalori_makan_malam"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:fontFamily="@font/sub_judul_font"
+                android:text="@string/kalori"
+                android:textAlignment="center"
+                android:textColor="@color/txt_color_grey"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_jumlah_kalori_makan_malam"
+                app:layout_constraintEnd_toStartOf="@+id/btn_add_makan_malam"
+                app:layout_constraintTop_toTopOf="@+id/tv_jumlah_kalori_makan_malam"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <androidx.constraintlayout.utils.widget.ImageFilterButton
+                android:id="@+id/btn_add_makan_malam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:background="@color/base_color"
+                android:src="@drawable/baseline_add_24"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_jumlah_kalori_makan_malam"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_jumlah_kalori_makan_malam" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView5"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/rounded_button_white"
+        app:cardCornerRadius="21dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView4">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/rounded_button_white">
+
+            <TextView
+                android:id="@+id/tv_cemilan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/sub_judul_font"
+                android:text="@string/cemilan"
+                android:textAlignment="center"
+                android:textColor="@color/txt_color_grey"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/img_cemilan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/add_sarapan_logo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_cemilan" />
+
+            <TextView
+                android:id="@+id/tv_list_cemilan1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/judul_font"
+                android:text="@string/cheese_burger"
+                android:textAlignment="center"
+                android:textColor="@color/txt_color_grey"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/img_cemilan"
+                app:layout_constraintStart_toEndOf="@+id/img_cemilan"
+                app:layout_constraintTop_toTopOf="@+id/img_cemilan" />
+
+            <TextView
+                android:id="@+id/tv_list_cemilan2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/judul_font"
+                android:text="@string/cheese_burger"
+                android:textAlignment="center"
+                android:textColor="@color/txt_color_grey"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@+id/tv_list_cemilan1"
+                app:layout_constraintTop_toBottomOf="@+id/tv_list_cemilan1" />
+
+            <TextView
+                android:id="@+id/tv_jumlah_kalori_cemilan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/sub_judul_font"
+                android:text="@string/_180"
+                android:textAlignment="center"
+                android:textColor="@color/txt_color_grey"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/tv_kalori_cemilan"
+                app:layout_constraintTop_toBottomOf="@+id/tv_cemilan" />
+
+            <TextView
+                android:id="@+id/tv_kalori_cemilan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:fontFamily="@font/sub_judul_font"
+                android:text="@string/kalori"
+                android:textAlignment="center"
+                android:textColor="@color/txt_color_grey"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_jumlah_kalori_cemilan"
+                app:layout_constraintEnd_toStartOf="@+id/btn_add_cemilan"
+                app:layout_constraintTop_toTopOf="@+id/tv_jumlah_kalori_cemilan"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <androidx.constraintlayout.utils.widget.ImageFilterButton
+                android:id="@+id/btn_add_cemilan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:background="@color/base_color"
+                android:src="@drawable/baseline_add_24"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_jumlah_kalori_cemilan"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_jumlah_kalori_cemilan" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

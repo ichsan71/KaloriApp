@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">KaloriApp</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="background">background</string>
+    <string name="landing_page_desc">Aplikasi Pengontrol Asupan \n Kalori dari Makanan yang dikonsumsi</string>
+    <string name="register">Register</string>
+    <string name="login">Login</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="umur">Umur</string>
+    <string name="berat_badan">Berat Badan</string>
+    <string name="tinggi_badan">Tinggi Badan</string>
+    <string name="kal">2000</string>
+    <string name="kalori_harian">Kalori  Harian</string>
+    <string name="jumlah_kalori">Jumlah Kalori</string>
+    <string name="tanggal">Senin, 04 April 2023</string>
+    <string name="sarapan">Sarapan</string>
+    <string name="cheese_burger">Cheese Burger</string>
+    <string name="_180">180</string>
+    <string name="kalori">Kalori</string>
+    <string name="makan_malam">Makan Malam</string>
+    <string name="cemilan">Cemilan</string>
+</resources>
