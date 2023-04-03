@@ -16,16 +16,24 @@
     </fragment>
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.marqumil.kaloriapp.ui.dashboard.DashboardFragment"
+        android:id="@+id/navigation_history"
+        android:name="com.marqumil.kaloriapp.ui.history.HistoryFragment"
         android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_history" >
+        <action
+            android:id="@+id/action_navigation_history_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.marqumil.kaloriapp.ui.notifications.NotificationsFragment"
+        android:id="@+id/navigation_statistic"
+        android:name="com.marqumil.kaloriapp.ui.notifications.StatisticFragment"
         android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        tools:layout="@layout/fragment_statistic" >
+        <action
+            android:id="@+id/action_navigation_statistic_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
     <activity
         android:id="@+id/landingPageActivity"
         android:name="com.marqumil.kaloriapp.ui.landingPage.LandingPageActivity"

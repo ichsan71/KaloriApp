@@ -31,4 +31,7 @@
     <string name="kalori">Kalori</string>
     <string name="makan_malam">Makan Malam</string>
     <string name="cemilan">Cemilan</string>
+    <string name="history">History</string>
+    <string name="statistic">Statistic</string>
+    <string name="pilih_tanggal">Pilih Tanggal</string>
 </resources>
